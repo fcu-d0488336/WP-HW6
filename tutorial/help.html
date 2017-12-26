@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Demo 第16組</title>
+     <meta charset="utf-8">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  		<!--Jquery-->
+  	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	 <!-- Bootstrap -->
+  	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+     <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <script type="text/javascript">
+       $youziku.load(".t ,.main", "13f6161f80b4475bbff1ce07e9849adc", "HanWangYenLight");
+       $youziku.draw();
+    </script>
+     <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 10px;
+        overflow: hidden;
+        background-color:	#D8D8D8;
+      }
+      li {
+        float: right;
+      }
+      li a:link,li a:visited {
+        display: inline;
+        color: #6633FF;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      li a:hover,li a:active {
+        background-color: #CC3399;
+      }
+    </style>
+
+  </head>
+  <body>
+    <!-- Head  -->
+    <div class="container">
+	    <div class="row">
+      <div class="col-xs-4 col-sm-5" style="padding-top:13px">
+        <h1 style="color:#66FFCC" class = "main"><strong>部落旅遊</strong></h1>
+      </div>
+      <div class = "col-xs-4 col-sm-3" style="padding-left:0px;padding-right:0px">
+      </br></br>
+        <a class = "text-right" href = "#">中文<a><strang>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a class = "text-right" href = "#">English<a><strang>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a class = "text-right" href = "#">日本語<a><strang>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a class = "text-right" href = "#">???<a><strang>
+      </div>
+      <div class="col-xs-4 col-sm-offset"style="padding-top:13px;padding-left:40px;padding-right:0px">
+      </br>
+  		  <div class="input-group">
+  					<input type="text" class="form-control"  placeholder="?入要搜尋的內容">
+              &nbsp;&nbsp;
+              <button id = "login" class="btn btn-default" type="button">
+  							登入
+  						</button>
+              &nbsp;&nbsp;
+              <button id = "singup" class="btn btn-default" type="button">
+  							註冊
+  						</button>
+  				</div>
+      </div>
+	    </div>
+    </div>
+    <hr style="height:1px;border:none;border-top:1px solid #111111;" />
+    <!-- Nav-->
+    <ul>
+      <li><a href="#">幫助中心</a></li>
+      <li><a href="#">會員功能</a></li>
+      <li><a href="#">旅遊資訊</a></li>
+      <li><a href="../Final-Assignment/translate.html">交通資訊</a></li>
+      <li><a href="#">旅遊攻略</a></li>
+      <li><a href="#">景點介紹</a></li>
+    </ul>
+
+	 <!--mini title-->
+    <div class="container">
+      <div class="row">
+      <div class="col-xs-4 col-sm-2" style="padding-top:20px;padding-left:0">
+        <h2 style="color:pink;font-size:210%"  class = "t"><b>幫助中心</b></h2>
+      </div>
+      </div>
+    </div>
+	 
+ <!--body-->
+     
+
+    <div class="container">
+	  <div class="row">
+		<div class="col-xs-4 col-sm-11">
+				<ul id="myTab" class="nav nav-tabs" style="background-color:white;">
+					<li class="active" >
+						<a href="#problem" data-toggle="tab">常見問題</a>
+					</li>
+					<li>
+						<a href="#pay" data-toggle="tab">付款方式</a>
+					</li>
+          <li>
+						<a href="#reservation" data-toggle="tab">預約行程</a>
+					</li>
+					<li>
+						<a href="#account" data-toggle="tab">帳號管理</a>
+					</li>
+				</ul>
+
+	    <h4><strong style="color:blue">常見問題</strong></h4>
+            <strong>Q1：如果我不是台灣人，我可以成為會員嗎？</strong><br>
+            <span style="color:#000080;">A:可以喔，目前註冊會員只需填寫e-mail、電話以及帳號密碼。</span><br>
+            <strong>Q2：註冊會員有甚麼好處？</strong><br>
+            <span style="color:#000080;">A:可以進一步接收到到我們的最新資訊，像是折扣或優惠。</span><br>
+            <strong>Q3：沒有成為會員是不是無法線上付款(信用卡)？</strong><br>
+            <span style="color:#000080;">A:是的，為了確定您的身分，以及扣款等問題，我們必須擁有您的聯絡方式。</span><br>
+            <strong>Q4：完成行程預定，需在多少天內完成付款？</strong><br>
+            <span style="color:#000080;">A:14天，若在期間內無法完成付款，很抱歉我們將取消您的旅遊行程。</span><br>
+            
+          
+
+            <h4><strong style="color:blue">付款方式</strong></h4>
+            <strong>Q1：請問有哪些付款方式？</strong><br>
+            <span style="color:#000080;">A:目前有線上信用卡分期，歐富寶，ATM轉帳。</span><br>
+            <strong>Q2：怎麼使用線上信用卡付款？</strong><br>
+            <span style="color:#000080;">A:在付款的頁面選擇信用卡支付，填寫您的信用卡資料。</span><br>
+            <strong>Q3：怎麼使用歐富寶付款？</strong><br>
+            <span style="color:#000080;">A:選擇預定的行程，填寫資料，選擇「O'Pay歐付寶」進行付款</span><br>
+            <strong>Q4：怎麼使用ATM轉帳？</strong><br>
+            <span style="color:#000080;">A:我們提供三個銀行帳戶。</span><br>
+            <span style="color:#000080;">玉山銀行-新板特區分行//銀行代號：808//匯款帳號：0000-1111-10101</span><br>
+            <span style="color:#000080;">合作金庫 - 北苗栗分行//銀行代號：006//匯款帳號：0000-222-020202</span><br>
+            <span style="color:#000080;">兆豐商銀-南彰化分行//銀行代號：017//匯款帳號：000-03-30303-0</span><br>
+
+
+
+            <h4><strong style="color:blue">預約行程</strong></h4>
+            <strong>Q1：如果我想預約的行程滿了，怎麼辦？</strong><br>
+            <span style="color:#000080;">A:請您參考本站的其他行程喔，也可以在形成截止前查看是否有新名額釋出。</span><br>
+            <strong>Q2：我想參加某行程，但是行程中的其中一個活動我並不想參與，是否可以讓我自由活動？</strong><br>
+            <span style="color:#000080;">A:抱歉我們無法讓您自由活動，我們必須顧及每個旅客的安全，還請您多加配合。</span><br>
+            <strong>Q3：如果因突發事故，無法參加已付款的預定行程，是否可以退款？</strong><br>
+            <span style="color:#000080;">A:我們會察看當下的時間去做推定退款金額，請參考以下資訊：</span><br>
+            <span style="color:#000080;">行程開始前一個月以上，退款金額100%，將會開放此名額讓其他需要的人報名</span><br>
+            <span style="color:#000080;">行程開始前半個月至一個月，退款金額50%，由於此時將會和合作夥伴協定，故無法全額退款，須留一部分作為本公司的賠償</span><br>
+            <span style="color:#000080;">行程開始前一至十四天，很抱歉我們無法退款</span><br>
+            <strong>Q4：若對於行程感到不滿意，我該如何申訴？</strong><br>
+            <span style="color:#000080;">A:行程結束後，我們將有意見回饋單或是網站的下方有附上聯絡資訊。</span><br>
+            
+
+
+	    <h4><strong style="color:blue">帳號管理</strong></h4>
+            <strong>Q1：忘記密碼怎麼辦？</strong><br>
+            <span style="color:#000080;">A:我們將會要您輸入當初綁定的手機/e-mail來發送更換密碼的網址，注意只在發送後的十分鐘內可有效更換密碼。</span><br>
+            <strong>Q2：舊的e-mail沒有在使用了，怎麼更新資料？</strong><br>
+            <span style="color:#000080;">A:請到會員中心在重新綁定一次e-mail，注意每個帳號最多只能更換兩次綁定e-mail，請小心使用。</span><br>
+            <strong>Q3：如果不想再繼續使用這支帳號，是否能將會員刪除？</strong><br>
+            <span style="color:#000080;">A:目前無法達成此要求。</span><br>
+            <strong>Q4：一隻手機/e-mail能綁定幾個帳號？</strong><br>
+            <span style="color:#000080;">A:只能兩個，為了防止有心人士惡意創帳，目前最多只能綁定兩個會員。</span><br>
+            <br>
+
+</div>
+</div>
+</div>	
+
+ <div class = "col-xs-4 col-sm-12">
+        <br/><br/><br/>
+        <hr style="height:1px;border:none;border-top:1px solid #111111;" />
+        <p style="text-align:center">Web程式設計 第16組</p>
+    </div>
+
+	  </div>
+    </div>
+  </body>
+</html>
+
