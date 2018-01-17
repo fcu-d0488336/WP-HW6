@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Google Map demo</title>
+    <style>
+      #map {
+        height: 500px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>加油站和郵局</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: {lat:24.178955 , lng: 120.646873}
+        });
+        setMarkers_p(map);
+        setMarkers_g(map);
+      }
+      var postoffice = [
+        ['東海大學郵局',24.179034,120.601637,'臺中市西屯區臺灣大道4段1727號(東海大學內)'],
+        ['臺中逢甲郵局',24.175274,120.649135,'臺中市西屯區河南路2段268號'],
+        ['臺中西屯郵局',24.176695,120.637655,'臺中市西屯區黎明路3段130號'],
+        ['臺中何厝郵局',24.164629,120.654202,'臺中市西屯區青海路1段83號'],
+        ['臺中工業區郵局',24.169450,120.606562,'臺中市西屯區工業區六路10號'],
+        ['臺中榮總郵局',24.183960,120.604836,'臺中市西屯區臺灣大道4段1650號(台中榮總內)'],
+        ['臺中永安郵局',24.190483,120.612213,'臺中市西屯區永安里西屯路3段166-80號'],
+      ];
+      //postoffice
+      function setMarkers_p(map) {
+        var image = {
+          url: 'mail.jpg',
+          size: new google.maps.Size(32,32)
+        };
+        var info = new google.maps.InfoWindow();
+        for (var i = 0; i < postoffice.length; i++) {
+          var post = postoffice[i];
+          var marker = new google.maps.Marker({
+            position: {lat: post[1], lng: post[2]},
+            map: map,
+            icon: image
+          });
+          marker.addListener('mouseover',(function(marker,i){
+            return function(){
+              info.setContent(postoffice[i][0] + "<br/><br/>" + postoffice[i][3]);
+              info.open(map,marker);
+            }
+          })(marker,i));
+        }
+      }
+      //gasstation
+      var gas = [
+        ['台灣中油 台中工業區站',24.183420,120.614397,'台中市西屯區台灣大道四段1047號'],
+        ['台灣中油 安和加油站',24.166240,120.618923,'台中市西屯區安和路51-8號'],
+        ['台灣中油 安祥站',24.162496,120.628183,'台中市西屯區環中路三段800號'],
+        ['台湾中油 光凰站',24.180471,120.632521,'台中市西屯區福科路110號'],
+        ['台灣中油 青海站',24.171337,120.643927,'台中市西屯區青海路二段211號'],
+        ['台湾中油 文心站',24.162863,120.650098,'台中市西屯區文心路三段2號'],
+        ['台灣中油 河南路站',24.172097,120.645468,'台中市西屯區河南路二段341號'],
+        ['台灣中油 安和加油站',24.166191,120.618897,'台中市西屯區安和路51-8號'],
+        ['台灣中油 文華站',24.171504,120.659831,'台中市西屯區文心路三段187號'],
+        ['台灣中油 恩光中清交流道站',24.200732,120.656973,'台中市西屯區環中路一段2490號'],
+        ['台灣中油 中清站',24.202153,120.654406,'台中市西屯區中清路三段150號'],
+        ['台灣中油 中科加油站',24.202429,120.610161,'台中市西屯區東大路一段1220號'],
+      ]
+      function setMarkers_g(map){
+        var image = {
+          url: '2.jpg',
+          size: new google.maps.Size(50,50)
+        };
+        var info = new google.maps.InfoWindow();
+        for (var i = 0; i < gas.length; i++) {
+          var g = gas[i];
+          var marker = new google.maps.Marker({
+            position: {lat: g[1],lng: g[2]},
+            map: map,
+            icon: image
+          });
+          marker.addListener('mouseover',(function(marker,i){
+            return function(){
+              info.setContent(gas[i][0] + "<br/><br/>" +gas[i][3]);
+              info.open(map,marker)
+            }
+          })(marker,i));
+      }
+      }
+    </script>
+   <script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALtRPWYStoOlzc8hCkBPJOEuFYShEFO2Y&callback=initMap">
+    </script>
+  </body>
+</html>
